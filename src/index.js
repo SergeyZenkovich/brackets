@@ -12,11 +12,8 @@ module.exports = function check(str, bracketsConfig) {
   		opens.push(bracketsConfig[i][0]);
   	}
   }
-
-
   let tempstr = '';
   	for (var i = 0; i<str.length; i++){
-  			
   		if (tempstr == "" && !opens.includes(str[i]) && !doubles.includes(str[i])){
   			return false;
   		}
@@ -29,7 +26,6 @@ module.exports = function check(str, bracketsConfig) {
   		else if(opens.includes(str[i]) ||  doubles.includes(str[i])){
   			tempstr+=str[i];
   		}
-  		
   	}
   return !(!!(tempstr));
 }
