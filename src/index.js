@@ -2,7 +2,6 @@ module.exports = function check(str, bracketsConfig) {
 	const obj = Object.fromEntries(bracketsConfig);
 	let temptStr = '';
 	for (let i = 0; i < str.length; i++) {
-		debugger
 		if (temptStr === '') {
 			temptStr += str[i];
 		}
